@@ -1,8 +1,11 @@
-from flask import render_template
+from flask import render_template, Blueprint
 from app import app
 
-@app.route('/')
-@app.route('/index')
+multilingual = Blueprint('multilingual', __name__, template_folder='templates')
+
+
+@multilingual.route('/')
+@multilingual.route('/index')
 def index():
     user = {'username': 'Miguel'}
     posts = [
@@ -15,5 +18,5 @@ def index():
             'body': 'The Avengers movie was so cool!'
         }
     ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
+    return render_template('multilingual/index.html', title='Home', user=user, posts=posts)
 
