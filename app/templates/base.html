@@ -7,7 +7,7 @@
         {% endif %}
     </head>
     <body>
-        <div>Microblog: <a href="/index">Home</a></div>
+        <div>Microblog: <a href="{{ url_for('multilingual.index') }}">Home</a> <a href="{{ url_for('multilingual.cake') }}">Cake</a></div>
         <hr>
         {% block content %}{% endblock %}
     </body>

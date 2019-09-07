@@ -3,7 +3,6 @@ from app import app
 
 multilingual = Blueprint('multilingual', __name__, template_folder='templates')
 
-
 @multilingual.route('/')
 @multilingual.route('/index')
 def index():
@@ -20,3 +19,6 @@ def index():
     ]
     return render_template('multilingual/index.html', title='Home', user=user, posts=posts)
 
+@multilingual.route('/cake')
+def cake():
+    return render_template('multilingual/cake.html', title='The Cake is a Lie')
