@@ -3,11 +3,11 @@
         {% if title %}
         <title>{{ title }} - Microblog</title>
         {% else %}
-        <title>Welcome to Microblog</title>
+        <title>{{_('Welcome to Microblog')}}</title>
         {% endif %}
     </head>
     <body>
-        <div>Microblog: <a href="{{ url_for('multilingual.index') }}">Home</a> <a href="{{ url_for('multilingual.cake') }}">Cake</a></div>
+        <div>Microblog: <a href="{{ url_for('multilingual.index') }}">{{_('Home')}}</a> <a href="{{ url_for('multilingual.cake') }}">{{_('Cake')}}</a></div>
         <hr>
         {% block content %}{% endblock %}
     </body>

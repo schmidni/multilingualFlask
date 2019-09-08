@@ -1,4 +1,5 @@
-from flask import render_template, Blueprint
+from flask import render_template, Blueprint, g
+from flask_babel import _, refresh
 from app import app
 
 multilingual = Blueprint('multilingual', __name__, template_folder='templates')
@@ -10,15 +11,17 @@ def index():
     posts = [
         {
             'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
+            'body': _('Beautiful day in Portland!')
         },
         {
             'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
+            'body': _('The Avengers movie was so cool!')
         }
     ]
-    return render_template('multilingual/index.html', title='Home', user=user, posts=posts)
+    return render_template('multilingual/index.html', title=_('Home'), user=user, posts=posts)
 
 @multilingual.route('/cake')
 def cake():
-    return render_template('multilingual/cake.html', title='The Cake is a Lie')
+    g.lang_code = 'en'
+    refresh()
+    return render_template('multilingual/cake.html', title=_('The Cake is a Lie'))
