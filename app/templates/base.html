@@ -7,7 +7,13 @@
         {% endif %}
     </head>
     <body>
-        <div>Microblog: <a href="{{ url_for('multilingual.index') }}">{{_('Home')}}</a> <a href="{{ url_for('multilingual.cake') }}">{{_('Cake')}}</a></div>
+        <a href="{{ url_for(request.endpoint, lang_code='en') }}">en</a>&nbsp;
+        <a href="{{ url_for(request.endpoint, lang_code='de') }}">de</a>&nbsp;
+        <a href="{{ url_for(request.endpoint, lang_code='fr') }}">fr</a>
+        <hr>
+        <div>Microblog: 
+            <a href="{{ url_for('multilingual.index') }}">{{_('Home')}}</a>&nbsp;
+            <a href="{{ url_for('multilingual.cake') }}">{{_('Cake')}}</a></div>
         <hr>
         {% block content %}{% endblock %}
     </body>
