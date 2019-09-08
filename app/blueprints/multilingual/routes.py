@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, g, redirect, request, current_app, abort
+from flask import render_template, Blueprint, g, redirect, request, current_app, abort, url_for
 from flask_babel import _, refresh
 from app import app
 
@@ -16,6 +16,10 @@ def pull_lang_code(endpoint, values):
 def before_request():
     if g.lang_code not in current_app.config['LANGUAGES']:
         abort(404)
+    dfl = request.url_rule.defaults
+    if 'lang_code' in dfl:
+        if dfl['lang_code'] != request.full_path.split('/')[1]:
+            abort(404)
 
 @multilingual.route('/')
 @multilingual.route('/index')
@@ -33,6 +37,8 @@ def index():
     ]
     return render_template('multilingual/index.html', title=_('Home'), user=user, posts=posts)
 
-@multilingual.route('/cake')
+@multilingual.route('/cake', defaults={'lang_code': 'en'})
+@multilingual.route('/kuchen', defaults={'lang_code': 'de'})
+@multilingual.route('/gateau', defaults={'lang_code': 'fr'})
 def cake():
     return render_template('multilingual/cake.html', title=_('The Cake is a Lie'))
