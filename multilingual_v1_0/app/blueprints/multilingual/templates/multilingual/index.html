@@ -5,4 +5,12 @@
     {% for post in posts %}
     <div><p>{{ post.author.username }}{{_(' says: ')}}<b>{{ post.body }}</b></p></div>
     {% endfor %}
+    <br>
+    <a href="/lang10">/</a> (301)<br>
+    <a href="/lang10/en/cake">/en/cake</a> (200)<br>
+    <a href="/lang10/de/kuchen">/de/kuchen</a> (200)<br>
+    <a href="/lang10/fr/kuchen">/fr/kuchen</a> (404)<br>
+    <a href="/lang10/fr/gateau">/fr/gateau</a> (200)<br>
+    <a href="/lang10/kuchen">/kuchen</a> (301)<br>
+    <a href="/lang10/unknown">/unknown</a> (404)<br>
 {% endblock %}
