@@ -24,7 +24,7 @@ msgstr "une belle journée à Portland!"
 
 #: app/blueprints/multilingual/routes.py:18
 msgid "The Avengers movie was so cool!"
-msgstr "Le flic Avengers était trop cool!"
+msgstr "Le film Avengers était trop cool!"
 
 #: app/blueprints/multilingual/routes.py:21 app/templates/base.html:10
 msgid "Home"
