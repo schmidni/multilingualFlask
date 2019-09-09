@@ -1,0 +1,1 @@
+from multilingual_v1_0.app.blueprints.multilingual.routes import multilingual

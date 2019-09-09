@@ -1,0 +1,68 @@
+# French translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-09-08 10:47+0200\n"
+"PO-Revision-Date: 2019-09-08 10:47+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: app/blueprints/multilingual/routes.py:14
+msgid "Beautiful day in Portland!"
+msgstr "une belle journée à Portland!"
+
+#: app/blueprints/multilingual/routes.py:18
+msgid "The Avengers movie was so cool!"
+msgstr "Le flic Avengers était trop cool!"
+
+#: app/blueprints/multilingual/routes.py:21 app/templates/base.html:10
+msgid "Home"
+msgstr "Maison"
+
+#: app/blueprints/multilingual/routes.py:25
+msgid "The Cake is a Lie"
+msgstr "Le gâteau est un mensonge"
+
+#: app/blueprints/multilingual/templates/multilingual/cake.html:4
+msgid "Hi, User!"
+msgstr "Salut, usager"
+
+#: app/blueprints/multilingual/templates/multilingual/cake.html:6
+msgid "I promise you that there will be "
+msgstr "Je te promets qu'il y aura du "
+
+#: app/blueprints/multilingual/templates/multilingual/cake.html:6
+msgid "cake"
+msgstr "gâteau"
+
+#: app/blueprints/multilingual/templates/multilingual/cake.html:6
+msgid " at the end of this article, so keep on reading!"
+msgstr " à la fin de cet article, alors continue à lire."
+
+#: app/blueprints/multilingual/templates/multilingual/index.html:4
+msgid "Hi, "
+msgstr "Salut, "
+
+#: app/blueprints/multilingual/templates/multilingual/index.html:6
+msgid " says: "
+msgstr " dit: "
+
+#: app/templates/base.html:6
+msgid "Welcome to Microblog"
+msgstr "Bonjour chez Microblog"
+
+#: app/templates/base.html:10
+msgid "Cake"
+msgstr "gâteau"
+
