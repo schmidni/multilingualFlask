@@ -15,7 +15,13 @@ def pull_lang_code(endpoint, values):
 @multilingual.before_request
 def before_request():
     if g.lang_code not in current_app.config['LANGUAGES']:
-        abort(404)
+        adapter = app.url_map.bind('')
+        try:
+            endpoint, args = adapter.match('/en' + request.full_path.rstrip('/ ?'))
+            return redirect(url_for(endpoint, **args), 301)
+        except:
+            abort(404)
+
     dfl = request.url_rule.defaults
     if 'lang_code' in dfl:
         if dfl['lang_code'] != request.full_path.split('/')[1]:
