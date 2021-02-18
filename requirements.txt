@@ -1,0 +1,8 @@
+python-decouple==3.3
+requests==2.24.0
+beautifulsoup4==4.9.3
+pymysql==0.10.1
+tweepy==3.9.0
+flask==1.1.2
+gunicorn==20.0.4
+Flask-Babel==2.0.0
