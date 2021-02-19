@@ -1,6 +1,7 @@
 from flask import render_template, Blueprint, g, redirect, request, current_app, abort, url_for
 from flask_babel import _, refresh
 from app import app
+import os
 
 multilingual = Blueprint('multilingual', __name__, template_folder='templates', url_prefix='/<lang_code>')
 
