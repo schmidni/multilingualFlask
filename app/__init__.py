@@ -20,5 +20,5 @@ def get_locale():
 
 @app.route('/')
 def home():
-    g.lang_code = request.accept_languages.best_match(app.config['LANGUAGES'])
+    if request.accept_languages.best_match(app.config['LANGUAGES']) == None: g.lang_code = app.config['LANGUAGES'][0]
     return redirect(url_for('multilingual.index'))
